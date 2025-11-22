@@ -3,7 +3,13 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { CustomSidebarTrigger } from "@/components/ui/custom-sidebar-trigger";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <SidebarProvider>
       <div className="flex min-h-screen w-full bg-background">
@@ -13,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <header className="flex items-center gap-3 border-b pb-4">
             <CustomSidebarTrigger />
             <h1 className="text-md font-bold tracking-tight lg:text-2xl">
-              Dashboard Overview
+              {title}
             </h1>
           </header>
           {children}

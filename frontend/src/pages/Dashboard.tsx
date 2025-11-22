@@ -1,4 +1,4 @@
-import Layout from "@/pages/Layout/Layout";
+import Layout from "@/layout/Layout";
 import { SaleProfitChart } from "@/components/Dashboard/SaleProfitChart";
 import { Card as OverviewCard } from "@/components/Dashboard/Card";
 import { BranchSalesChart } from "@/components/Dashboard/BranchSalesChart";
@@ -15,7 +15,7 @@ const topProducts = [
 
 export const Dashboard = () => {
   return (
-    <Layout>
+    <Layout title="Dashboard Overview">
       <div className="flex flex-col">
         <div className="flex flex-wrap gap-4 p-4">
           <OverviewCard
