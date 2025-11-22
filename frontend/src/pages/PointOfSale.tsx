@@ -19,6 +19,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { ComboBox } from "@/components/PointOfSale/ComboBox";
 
 export const PointOfSale = () => {
   return (
@@ -29,19 +30,7 @@ export const PointOfSale = () => {
           <ChevronLeft />
         </Button>
 
-        <Select defaultValue="">
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Select a branch" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              <SelectLabel>Branch</SelectLabel>
-              <SelectItem value="marilao">Marilao</SelectItem>
-              <SelectItem value="bulacan">Bulacan</SelectItem>
-              <SelectItem value="manila">Manila</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+        <ComboBox />
 
         <Button variant="outline" size="icon" aria-label="Sort">
           <ArrowDownAZ />
