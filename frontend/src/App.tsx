@@ -1,12 +1,15 @@
-import { Button } from "@/components/ui/button"
-
+import { RouterProvider } from "react-router";
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import { router } from "@/routes";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-    </div>
-  )
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Toaster />
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

@@ -6,8 +6,8 @@ import {
 } from "@/components/ui/card";
 
 interface RankingItem {
-  rank: number;
-  name: string;
+  productRank: number;
+  productName: string;
   sales: number | string;
   profit: number | string;
 }
@@ -42,27 +42,27 @@ export const RankingCard = ({ title, items, className }: RankingCardProps) => {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {items.map((item) => (
             <li
-              key={item.rank}
+              key={item.productRank}
               className="flex items-center px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
             >
-              {/* Rank */}
+              {/* productRank */}
               <span
                 className={`w-7 h-7 flex items-center justify-center rounded-full font-semibold text-sm ${
-                  item.rank === 1
+                  item.productRank === 1
                     ? "bg-yellow-400 text-gray-900"
-                    : item.rank === 2
+                    : item.productRank === 2
                     ? "bg-gray-400 text-white"
-                    : item.rank === 3
+                    : item.productRank === 3
                     ? "bg-amber-700 text-white"
                     : "bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-200"
                 }`}
               >
-                {item.rank}
+                {item.productRank}
               </span>
 
-              {/* Name */}
+              {/* productName */}
               <span className="flex-1 ml-3 text-sm sm:text-base font-medium text-gray-800 dark:text-gray-100 truncate">
-                {item.name}
+                {item.productName}
               </span>
 
               {/* Sales */}

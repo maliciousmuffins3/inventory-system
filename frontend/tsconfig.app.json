@@ -23,14 +23,14 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true,
 
     /* Paths */
     "paths": {
       "@/*": ["./src/*"],
       "@/helpers/*": ["./src/helpers/*"],
       "@/hooks/*": ["./src/hooks/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/pages/*": ["./src/pages/*"]
+      "@/api/*": ["./src/api/*"]
     }
   },
   "include": ["src"]

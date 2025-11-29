@@ -1,4 +1,5 @@
 import { Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface DownloadButtonProps {
   onClick?: () => void;
@@ -10,11 +11,11 @@ export const DownloadReportButton = ({
   className,
 }: DownloadButtonProps) => {
   return (
-    <button
+    <Button
       onClick={onClick}
       className={`
         flex items-center gap-2 px-4 py-2 
-        bg-green-500 hover:bg-green-600 
+        bg-primary hover:bg-primary/90
         text-white font-semibold 
         rounded-lg shadow-md hover:shadow-lg 
         transition-all active:scale-95
@@ -23,6 +24,6 @@ export const DownloadReportButton = ({
     >
       <Download size={18} />
       <span>Download Report</span>
-    </button>
+    </Button>
   );
 };

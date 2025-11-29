@@ -1,5 +1,4 @@
-// src/components/Login.tsx
-import React from "react";
+
 import { Button } from "@/components/ui/button";
 import { FcGoogle } from "react-icons/fc";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

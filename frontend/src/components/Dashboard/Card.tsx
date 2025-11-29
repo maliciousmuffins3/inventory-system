@@ -9,7 +9,7 @@ import {
 interface CardProps {
   title: string;
   desc?: string;
-  content: string;
+  content: string | number;
   content_desc?: string;
   className?: string;
 }
@@ -37,7 +37,7 @@ export const Card = ({
       </CardHeader>
 
       <CardContent className="px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-3 lg:px-6 lg:py-4">
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-green-500">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold text-primary">
           {content}
         </h1>
         {content_desc && (
